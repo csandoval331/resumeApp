@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    div(class="jumbotron")
+        h1 Projects Site
+        p This site will be a collage of projects that I have completed. This site may be subject to neglect if I am too busy to update it.
+        p This project it self is being hosted on my raspberry pi. I am using nginx(a webserver) and cloudflare(a dns server) to host this site with https credentials.
+        p If enough interest is shown, i will be post a tutorial. Posting tutorials is not my forte, but willing to give it a shot.
+    div(class="row")
+        each proj in project
+            div(class="col-sm-12 col-md-6")
+                div(class="card")
+                    img(class="card-img" src='/images/proj/'+proj.img)
+                    div(class="card-body")
+                        h5(class="card-title")=proj.name
+                        p(class="card-text")=proj.description

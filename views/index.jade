@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  div(class="jumbotron")
+    div(class="row")
+      div(class="col-4")
+        img(src="/images/selfie.jpg" class="img-fluid")
+      div(class="col-8")
+        div(class="row")
+          img(src="/images/welcome.png" class="img-fluid")
+        div(class="row")
+          h1 My name is Charly Sandoval
+          h5 I am a Computer Science student and a coffee enthusiast
+        div(class="row" style="border-top-style:solid; border-top-color:black; border-top-width:1px;")
+          table(class="table")
+            tr
+              td #[strong Email]
+              td #[a(href="mailto:charlysandoval331@gmail.com") charlysandoval331@gmail.com]
+            tr
+              td #[strong Phone]
+              td #[a(href="tel:773-289-2565") 773-289-2565]
+            tr 
+              td #[strong Website]
+              td #[a(href="https://charlysandoval.tk" target="_blank") charlysandoval.tk]
+            tr
+              td #[strong Github]
+              td #[a(href="https://github.com/csandoval331" target="_blank") github.com/csandoval331 ]
