@@ -17,11 +17,18 @@ a {
   background-color: #DCE1E9;
 }
 
-.navbar{
-  background-color: #363732;
-}
 .card{
   margin-top: 10px;
   background-color: #DCE1E9;
 }
 
+.table a{
+  color:black;
+  text-decoration: underline;
+  text-decoration-thickness:1px;
+  text-decoration-color:#0000EE ;
+}
+
+.table a:hover{
+  text-decoration-color: white;
+}
