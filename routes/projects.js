@@ -1,12 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-var project =[  {img:"empty.jpg",name:"temp1",description:"tempA"},
-                {img:"empty.jpg",name:"temp2",description:"tempB"},
-                {img:"empty.jpg",name:"temp3",description:"tempC"},
-                {img:"empty.jpg",name:"temp4",description:"tempD"},
-                {img:"empty.jpg",name:"temp5",description:"tempE"},
-                {img:"empty.jpg",name:"temp6",description:"tempF"}]
+var project =[  {img:"one.png",name:"LoginApp",link:[{name:"Site: login.charlysandoval.tk",ref:"https://login.charlysandoval.tk/"},{name:"proj: github.com/csandoval331",ref:"https://github.com/csandoval331/resumeApp"}],description:[{title:"About",body:["In this app, you will be able to create an account, loggin to view your information, and loggout"]}, {title:"What I learned",body:["For the longest, I never understood logins, so I wanted to challenge my self","This app is running on node, express for routing, jade for html templating, passport for authentication, sessions for verification, and redis for quick login."]}] },
+                {img:"two.png",name:"OwnCloud Server",link:[{name:"Site: storage.charlysandoval.tk",ref:"https://storage.charlysandoval.tk/"},{name:"proj: owncloud.com/",ref:"https://owncloud.com/"}],description:[{title:"Description",body:["OwnCloud is a free and open-source, thereby allowing anyone to install and operate."]}, {title:"What I learned",body:["I wanted to familiarize my self with docker.","Learned about networking, exposing ports, docker-compose, and more."]}] },
+                {img:"three.png",name:"Button Counter",link:[{name:"Site: counter.charlysandoval.tk",ref:"https://counter.charlysandoval.tk/"},{name:"proj: github.com/csandoval331",ref:"https://github.com/csandoval331/counter-app"}],description:[{title:"Description",body:["Wanted to create an app that would allow multiple users to click on an increment button. The increment button in turns increments the number and updates all users views with the most up to date number"]}, {title:"What I learned",body:["It was fun to learn about server-sent events. Server-sent events are events sent from the server. This is unique due to how clients usuall interact with servers. Clients connect to server and get updates. But with server-sent events, the server is connecting to the client and sending updates.","Used nodejs,express, jade, and socket.io to create this app"]}] },
+                {img:"four.png",name:"POS app",link:[{name:"Site: store.charlysandoval.tk",ref:"https://store.charlysandoval.tk/"},],description:[{title:"Description",body:["This app is meant to be used by a store owner with a barcode scanner. User scan items, gets added to receipt, and prints out receipt."]}, {title:"What I learned",body:["This was a 2 month long project. I used relation tables to figure out how everything is connected, in terms of the database, used node and express for the server, mongoose and mongdb for database read and writes, and a lot more. This project pushed the limits of my patience, creativity, and knowledge"]}] },
+                ]
 
 router.get('/',(req,res)=>{
     res.render('projects',{project} );

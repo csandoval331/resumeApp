@@ -12,5 +12,11 @@ block content
                 div(class="card")
                     img(class="card-img" src='/images/proj/'+proj.img)
                     div(class="card-body")
-                        h5(class="card-title")=proj.name
-                        p(class="card-text")=proj.description
+                        h4(class="card-title")=proj.name
+                        each li in proj.link ? proj.link : []
+                            a(href=li.ref target="_blank" style = "margin-right:10px")=li.name
+                        div(style="margin-top:1rem")
+                        each desc in proj.description ? proj.description : ""
+                            h5=desc.title
+                            each d in desc.body ? desc.body : ""
+                                p=d
